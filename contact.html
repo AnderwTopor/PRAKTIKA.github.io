@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Мое Портфолио</h1>
+        <nav>
+            <ul>
+                <li><a href="bio.html">Биография</a></li>
+                <li><a href="resume.html">Резюме</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacts">
+            <h2>Оставьте вашу заявку</h2>
+            <form id="form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" name="phone">
+                <label for="message">Ваше сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+
+        <section>
+            <h2>Мои соцсети:</h2>
+            <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                    <a href="tel:+79953871423">
+                        <i class="Phone">📞</i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="http://vk.com/andrewtopa">
+                        <i class="VK">VK</i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="http://t.me/andtopp">
+                        <i class="Telegram">TG</i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AndrewToporov</p>
+    </footer>
+
+    <script src="Java.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>
+        emailjs.init("hVtxG6K48xSy0-UtK");
+        document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_fm50pwg', 'template_w0cc2jc', this)
+        .then(function() {
+            alert('Сообщение успешно отправлено!');
+        }, function(error) {
+            alert('Ошибка отправки: ' + error);
+        });
+        });
+    </script>
+    
+</body>
+</html>

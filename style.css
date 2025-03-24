@@ -1,0 +1,283 @@
+/* Общие стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    display: none; 
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #666666;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Стили для секции Резюме */
+.resume {
+    margin-bottom: 30px;
+}
+
+.resume table {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.resume table th, .resume table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    line-break: normal;
+}
+
+.resume table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Стили для Галереи */
+.gallery {
+    text-align: center;
+}
+
+.gallery-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для Контактов */
+.contacts p {
+    font-size: 18px;
+}
+
+.contacts form{
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.contacts form input[type="text"], .contacts form input[type="email"], .contacts form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.contacts form input[type="submit"] {
+    background-color: #207723;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+  }
+  
+  ul.social-buttons li a {
+      font-size: 20px;
+      line-height: 50px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      transition: 0.3s;
+      color: white;
+      border-radius: 100%;
+      outline: none;
+      background-color: #212529;
+      text-align: center;
+      text-decoration: none;
+  }
+  
+  ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: #fed136;
+  }
+  
+/* Стили для Биографии */
+.bio p {
+    font-size: 25px;
+}
+
+
+
+@media (max-width: 750px) {
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0px;
+        position: static;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .gallery-item img {
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     
+  .resume section, #bio {
+      width: 90%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px 20px 20px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+  }
+  
+  #bio {
+      padding: 5px 20px 20px 20px;
+  }
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    th, td {
+        display: flex;
+        flex-basis: 100%;
+    }
+  .resume section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: medium;
+  }
+  .resume section table th, .resume section table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+  }
+  .resume section table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+  }
+  
+  .contact-form {
+      width: 80%;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      font-weight: bold;
+  }
+  
+  .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+  }
+  
+  .contacts form input[type="submit"] {
+    background-color: #207723;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+  .contact-form input[type="submit"]:hover {
+      background-color: #45a049;
+  }
+  
+  ul.social-buttons {
+    margin-bottom: 0;
+  }
+  
+  ul.social-buttons li a {
+      font-size: 20px;
+      line-height: 50px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      transition: 0.3s;
+      color: white;
+      border-radius: 100%;
+      outline: none;
+      background-color: #212529;
+      text-align: center;
+      text-decoration: none;
+  }
+  
+  ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: #fed136;
+  }
+  
+  .list-inline-item {
+    display: inline-block;
+  }
+}
